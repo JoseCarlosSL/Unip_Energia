@@ -1,0 +1,381 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+/* header start */
+.logo-nav {
+    width: 80%;
+}
+
+.logo2{
+    width: 140px;
+    margin-top: 6px;
+    margin-left: 100px;
+}
+
+.lista-menu{
+    list-style: none;
+}
+
+
+header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 50px;
+    background: #87CEEB;
+    border: solid 2px #36b1e2;
+}
+
+
+header .header-esquerda {
+    display: flex;
+    align-items: center;
+}
+
+header .header-esquerda .logo {
+    width: 140px;
+    margin-top: 6px;
+}
+
+header .header-esquerda nav {
+    margin-left: 50px;
+}
+
+header .header-esquerda nav ul {
+    display: flex;
+}
+
+
+
+nav ul li a {
+    display: block;
+    color: #eeeef1;
+    font-size: 18px;
+    padding: 5px 25px;
+    transition: 0.2s;
+}
+
+.inicial{
+    background-color: #0b0baf;
+    border-radius: 20px;
+}
+
+.inicial a:hover{
+    color: #08b8ee;
+}
+
+nav ul li a:hover {
+    color: #4b80f1;
+}
+
+nav .login-signup {
+    display: none;
+}
+
+header .header-direita {
+    display: flex;
+    align-items: center;
+}
+
+header .header-direita .hamburger {
+    margin-left: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+header .header-direita .hamburger div {
+    width: 30px;
+    height: 2px;
+    margin: 6px 0;
+    background: #9b2828;
+}
+
+@media only screen and (max-width: 1000px) {
+    header {
+        padding: 0 20px;
+    }
+
+    header .header-direita .hamburger {
+        display: block;
+    }
+
+    header .header-esquerda nav {
+        margin: 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        /* border-bottom: 2px solid #000080;
+        border-top: 2px solid #000080 ; */
+        border: solid 2px #2bacdf;
+        width: 100%;
+        height: fit-content;
+        background-color: #72cdf1;
+        padding: 30px;
+        transition: 0.3s;
+        text-align: center;
+        z-index: 2;
+    }
+    header .header-esquerda nav.active {
+        top: 70px;
+    }
+
+    header .header-esquerda nav ul {
+        display: block;
+    }
+
+    .item-menu{
+        padding-bottom: 10px;
+        padding-top: 10px;
+        border-bottom: 2px solid  #0b0baf ;
+        border-width: thin;
+        text-transform: capitalize;
+    }
+    .logo2{ 
+        display: none;
+    }
+}
+/* header end */
+
+/* Fundo conteudo start */
+.fundo{
+    display: flex;
+    /* background-color: #054e6b; */
+    width: 100%;
+    height: 100%;
+    background-image: url(../imagens/nuvens.avif);
+    background-position: center;
+    background-repeat: repeat;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px 20px;
+    margin: 50px 100px 50px 100px;
+    background-color: #87CEEB;
+    border-radius: 10px;
+    border: solid 2px #36b1e2;
+}
+
+img{
+  height: 100%;
+  width: 100%;
+}
+
+.item-lista{
+    margin-left: 20px;
+    font-size: 20px;
+    list-style:circle;
+}
+
+.item-lista li{
+    margin-bottom: 15px;
+}
+
+.ancora a {
+    text-decoration:underline 1px #20a8dd;
+    color: black;
+    font-size: 20px;
+}
+
+.ancora a:hover{
+    color: #0808c2;
+    cursor: pointer;
+    font-size: 22px;
+}
+
+.lista-img{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin: 20px 0 40px 0;
+}
+
+.lista-img img{
+    width: 80%
+}
+
+.titulo-imagem{
+    display: flex;
+    width: 100%;
+    border-top: double #2bacdf ;
+    margin-top: 35px;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.titulo-logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.botao-topo{
+    margin-left: auto;
+    margin-right: 30px;
+}
+
+.botao-topo .topo{
+    border: solid 0.5px;
+    border-color: #20a8dd;
+    border-radius: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+}
+
+.titulo-imagem img{
+    width: 30px;
+}
+
+.fotos{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+/* estilo dos textos start */
+.titulo-principal{
+    align-self: flex-start;
+    margin: 20px 0 ;
+    font-size: 35px;
+    color: #000080;
+    text-transform: capitalize;
+}
+
+.titulo-secundario{
+    align-self: center;
+    margin: 20px 15px 20px 15px;
+    font-size: 25px;
+    margin-top: 30px;
+    color: #000080;
+    text-transform: capitalize;
+}
+
+.titulo3{
+    align-self: center;
+    margin: 30px 0 ;
+    font-size: 20px;
+    margin-top: 30px;
+    color: #000080;
+    text-transform: capitalize;
+}
+
+.texto-conteudo{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.titulo-secundario a{
+    color: #000080;
+}
+/* estilo dos textos end */
+
+
+/* conteudo das energias start */
+.beneficios-desvantagens{
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    height: auto;
+}
+
+.fotos-abaixo{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 30px;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+
+.fotos-abaixo img{
+   width: 30%;
+   height: 70%;
+}
+
+/* conteudo das energias end */
+
+
+/* fundo conteudo end*/
+
+
+
+
+
+/* responsivo conteudo start*/
+@media only screen and (max-width: 1000px) {
+    .conteudo{
+        margin: 10px 10px;
+        width: 95%;
+    }
+
+    .fotos-abaixo img{
+        width: 45%;
+        height: 100%;
+     }
+
+    .lista-img{
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        margin: 20px 0 40px 0;
+    }
+
+    .lista-img img{
+        width: 70%;
+    }
+}
+/* responsivo end */
+
+/* footer S */
+footer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #87CEEB;
+    border: solid 2px #36b1e2;
+}
+
+.quem-somos{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width:48% ;
+    align-items: center;
+}
+
+.quem-somos h1{
+    align-self: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.quem-somos h2{
+    align-self: center;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/* footer End */
